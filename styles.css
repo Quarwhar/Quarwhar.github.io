@@ -1,3 +1,38 @@
 .center-text {
   text-align: center;
 }
+
+body, ul {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: background 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+/* Optional: Center text styling */
+.center-text {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 20px;
+}
