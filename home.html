@@ -17,20 +17,31 @@
       justify-content: space-between;
       align-items: center;
     }
-    .calendar-days, .calendar-dates {
+    .calendar-days,
+    .calendar-dates {
       display: grid;
       grid-template-columns: repeat(7, 1fr);
     }
     .calendar-dates div {
-        padding: 5px;
-         height: 60px;
-         text-align: left;      /* Align text to the left */
-         vertical-align: top;   /* Doesn't affect divs by default */
-         display: flex;         /* Use flexbox */
-        align-items: flex-start;
-         justify-content: flex-start;
-         border: 1px solid #ccc;
-         font-size: 14px;
+      position: relative;            /* Enable absolute positioning inside */
+      padding: 10px;
+      height: 130px;
+      border: 1px solid #ccc;
+      font-size: 10px;
+      box-sizing: border-box;
+
+      display: flex;                 /* Optional: flex layout for other content */
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    .day-number {
+      font-weight: bold;
+      font-size: 14px;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      top: 5px;
+      left: 5px;
     }
     .today {
       background-color: #00f7eaea;
@@ -52,15 +63,13 @@
   <main>
     <section id="introduction">
       <p>
-        This is my personal website that I'll be working on for my AP Computer Science class.
-        Click <a href="https://github.com/Quarwhar/Quarwhar.github.io.git" target="_blank" rel="noopener noreferrer">
-        here</a> to visit my public GitHub repository for this website.
+        <a href="https://github.com/Quarwhar/Quarwhar.github.io.git" target="_blank" rel="noopener noreferrer">
+        Github Repository</a>
       </p>
     </section>
 
     <!-- Calendar Section -->
     <section id="calendar-section">
-      <h3 class="center-text">Calendar</h3>
       <div class="calendar">
         <div class="calendar-header">
           <button id="prev">&#8249;</button>
